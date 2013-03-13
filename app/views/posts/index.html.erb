@@ -1,4 +1,12 @@
-<h1>Listing posts</h1>
+<head>
+<link rel="stylesheet" type="text/css" href="henrystyle.css">
+</head>
+
+
+<h1>Henry van Wagenberg's blog</h1>
+<img src="http://upload.wikimedia.org/wikipedia/commons/d/d7/Caspar_David_Friedrich_Landscape_in_the_Riesengebirge.jpg" />
+
+
 
 <table>
   <tr>
@@ -12,11 +20,11 @@
 
 <% @posts.each do |post| %>
   <tr>
-    <td><%= post.inspect %></td>
+    
     <td><%= post.name %></td>
     <td><%= post.title %></td>
     <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'read', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
