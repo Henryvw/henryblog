@@ -1,0 +1,28 @@
+
+%h1 Henry van Wagenberg's blog
+
+-# #henry test
+-# .will will
+
+= image_tag "Caspar.jpg" 
+
+
+
+- @posts.each do |post| 
+  
+  .posts  
+    .post-author 
+      = post.name 
+    .post-title
+      = post.title 
+    .post-content
+      =truncate( post.content,:length => 200)
+    = link_to 'Read More', post 
+    =# link_to 'Edit', edit_post_path(post) 
+    =# link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } 
+ 
+
+
+%br/ 
+
+=# link_to 'New Post', new_post_path 

@@ -1,3 +1,31 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+img {
+	width:600px;
+}
+
+.posts {
+  width: 600px;
+
+  .post-author {
+    font-size: 16px;
+
+  }
+
+  .post-content {
+    
+
+  }
+
+  .post-title {
+    font-style: italic;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+
+  }
+
+
+}
