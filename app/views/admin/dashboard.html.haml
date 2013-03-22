@@ -9,7 +9,7 @@
     .post-title
       = post.title 
     .post-content
-      =truncate( post.content,:length => 200)
+      =truncate( post.content,:length => 300)
     = link_to 'Read More', post 
     = link_to 'Edit', edit_post_path(post) 
     = link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } 

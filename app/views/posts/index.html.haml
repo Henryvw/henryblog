@@ -1,22 +1,37 @@
-
+-if current_user
+  %span logged in as
+  = current_user.email
+  = link_to 'log out', logout_path
+-else 
+  = form_tag sessions_path do
+    = label_tag :email
+    = text_field_tag :email
+    = label_tag :password
+    = password_field_tag :password
+    = submit_tag "log in"
+  = link_to "or sign up", new_user_path
 %h1 Henry van Wagenberg's blog
 
+.sub-header Philosophy in Practice in Business and Life
+
+%p 
 -# #henry test
 -# .will will
 
 = image_tag "Caspar.jpg" 
+.img_caption Watercolor by Caspar David Friedrich, 1820
 
-
+%p
 
 - @posts.each do |post| 
   
   .posts  
+    .post-title
+      = link_to post.title, post
     .post-author 
       = post.name 
-    .post-title
-      = post.title 
     .post-content
-      =truncate( post.content,:length => 200)
+      =truncate( post.content,:length => 300)
     = link_to 'Read More', post 
     =# link_to 'Edit', edit_post_path(post) 
     =# link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } 
@@ -24,5 +39,6 @@
 
 
 %br/ 
-
+= link_to 'About', about_path
+= link_to 'Contact', contact_path
 =# link_to 'New Post', new_post_path 

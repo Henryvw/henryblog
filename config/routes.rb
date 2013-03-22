@@ -1,7 +1,16 @@
 Henryblog::Application.routes.draw do
+
+
+  match "about" => "static_pages#about"
+  match "contact" => "static_pages#contact"
+  match "logout" => "sessions#destroy", as: "logout"
+
   get "admin/dashboard"
 
+
   resources :posts
+  resources :users
+  resources :sessions
 
 
   # get "home/index"
