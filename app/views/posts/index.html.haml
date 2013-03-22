@@ -1,18 +1,12 @@
--if current_user
-  %span logged in as
-  = current_user.email
-  = link_to 'log out', logout_path
--else 
-  = form_tag sessions_path do
-    = label_tag :email
-    = text_field_tag :email
-    = label_tag :password
-    = password_field_tag :password
-    = submit_tag "log in"
-  = link_to "or sign up", new_user_path
+
 %h1 Henry van Wagenberg's blog
 
 .sub-header Philosophy in Practice in Business and Life
+
+%br/ 
+= link_to 'About', about_path
+= link_to 'Contact', contact_path
+=# link_to 'New Post', new_post_path 
 
 %p 
 -# #henry test
@@ -38,7 +32,16 @@
  
 
 
-%br/ 
-= link_to 'About', about_path
-= link_to 'Contact', contact_path
-=# link_to 'New Post', new_post_path 
+
+-if current_user
+  %span logged in as
+  = current_user.email
+  = link_to 'log out', logout_path
+-else 
+  = form_tag sessions_path do
+    = label_tag :email
+    = text_field_tag :email
+    = label_tag :password
+    = password_field_tag :password
+    = submit_tag "log in"
+  = link_to "or sign up", new_user_path
