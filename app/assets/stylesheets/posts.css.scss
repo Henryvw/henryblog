@@ -7,13 +7,26 @@
 }
 
 img {
-	width:600px;
+	width:400px;
 }
 
 .img_caption {
   font-size: 10px;
   font-style: italic;
 }
+
+
+#more_button {
+  background-image :url(/assets/morebutton.png);
+  max-height: 100px; 
+  max-width: 100px;
+}
+
+#more_button:hover {
+  max-height: 100px; 
+  max-width: 100px;
+}
+
 .posts {
     width: 600px;
 
@@ -32,6 +45,6 @@ img {
     margin-bottom: 10px;
 
   }
-
-
 }
+
+

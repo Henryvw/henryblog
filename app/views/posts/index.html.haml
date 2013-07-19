@@ -1,7 +1,14 @@
-= image_tag "MoreButton.png", :style => "max-height: 100px; max-width: 100px;"
-/ = link_to about_path image_tag "MoreButton.png", :style => "max-height: 100px; max-width: 100px;"
+
+#more_button
 
 = image_tag "titlebox.png"
+
+/ = link_to image_tag, about_path, id: "more_button"
+/ = link_to about_path image_tag "MoreButton.png", :style => "max-height: 100px; max-width: 100px;"
+
+%h3 Hey there
+
+%p I'm a 28 year old philosophy student and entrepreneur who believes that philosophy has practical applications in life, in business, in getting things done, and in creating extraordinary value and contributions to the world.
 
 = link_to "My Programming Schedule", programming_path
 
@@ -56,4 +63,5 @@
     = label_tag :password
     = password_field_tag :password
     = submit_tag "log in"
-  = link_to "or sign up", new_user_path
+
+
