@@ -1,9 +1,10 @@
 
-#more_button
+
 
 .center
+  = link_to image_tag("stoic hacks logo.png"), index_path
   = image_tag "titlebox.png"
-  = image_tag "stoic hacks logo.png"
+
 
 
 / = link_to image_tag, about_path, id: "more_button"
@@ -15,49 +16,38 @@
 
 = link_to "My Programming Schedule", programming_path
 
-=# link_to 'New Post', new_post_path 
-
-%p 
--# #henry test
--# .will will
-
-
-.img_caption Hacking life with Stoic Philosophy
-
-
 
 %p
+  - @posts.each do |post| 
+    
+    .posts  
+      .post-title
+        = link_to post.title, post
+      .post-author 
+        = post.name 
+      .post-content
+        =truncate( post.content,:length => 300)
+      = link_to 'Read More', post 
+      =# link_to 'Edit', edit_post_path(post) 
+      =# link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } 
+   
 
-- @posts.each do |post| 
-  
-  .posts  
-    .post-title
-      = link_to post.title, post
-    .post-author 
-      = post.name 
-    .post-content
-      =truncate( post.content,:length => 300)
-    = link_to 'Read More', post 
-    =# link_to 'Edit', edit_post_path(post) 
-    =# link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } 
- 
+  %br
+  %br
+  %br
+  %br
+  %br
 
-%br
-%br
-%br
-%br
-%br
-
--if current_user
-  %span logged in as
-  = current_user.email
-  = link_to 'log out', logout_path
--else 
-  = form_tag sessions_path do
-    = label_tag :email
-    = text_field_tag :email
-    = label_tag :password
-    = password_field_tag :password
-    = submit_tag "log in"
+  -if current_user
+    %span logged in as
+    = current_user.email
+    = link_to 'log out', logout_path
+  -else 
+    = form_tag sessions_path do
+      = label_tag :email
+      = text_field_tag :email
+      = label_tag :password
+      = password_field_tag :password
+      = submit_tag "log in"
 
 

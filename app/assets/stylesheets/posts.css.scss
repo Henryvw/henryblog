@@ -17,6 +17,12 @@ img {
 
 .center { text-align: center }
 
+body, html{
+    background-color:#EAE9E1;
+      width:90%;
+    height:157%;
+    margin: auto;
+}
 
 #more_button {
   background-image :url(/assets/morebutton.png);
@@ -30,7 +36,7 @@ img {
 }
 
 .posts {
-    width: 600px;
+    width: 100%;
 
   .post-author {
     font-size: 12px;
@@ -49,4 +55,16 @@ img {
   }
 }
 
+
+#content
+{    top:0px;
+    position:absolute;
+    border:1px solid red;
+}
+
+#wrapper {
+  background-color:#EAE9E1;
+  width: 20%;
+  margin: auto;
+}
 

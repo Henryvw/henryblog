@@ -1,6 +1,6 @@
 Henryblog::Application.routes.draw do
 
-
+  match "index" => "posts#index"
   match "about" => "static_pages#about"
   match "contact" => "static_pages#contact"
   match "paintings" => "static_pages#paintings"
