@@ -5,6 +5,7 @@ Henryblog::Application.routes.draw do
   match "contact" => "static_pages#contact"
   match "paintings" => "static_pages#paintings"
   match "programming" => "static_pages#programming"
+  match "odyssey" => "static_pages#odyssey"
   match "logout" => "sessions#destroy", as: "logout"
   get "admin/dashboard"
 
