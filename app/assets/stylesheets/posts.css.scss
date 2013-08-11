@@ -80,16 +80,18 @@ body, html{
 }
 
 .infobox {
-    width: 100%;
-    height: 100px;
+    width: 120%;
+    height: 220px;
     position: relative;
-    border: 10px solid red;
-    background: url(/assets/blankbox.png); 
+    background: url(/assets/smallinfoblankbox.png); 
+    background-position: center;
     background-size: cover;
 }
 
-.aa {
+.infotext {
     position: absolute;
-    top: 10px;
-    left: 0;
+    top: 30%;
+    left: 12%;
+    z-index:100;
+    width: 80%
 }

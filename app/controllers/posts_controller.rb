@@ -40,14 +40,14 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
       else
-        format.html { render action: "new" }
+        format.html { render action: "new", notice: 'Henry, you made an error posting the blog.' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
@@ -80,4 +80,12 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+    def post_params
+      params.require(:post).permit(:content, :name, :title)
+    end
 end
+
+  
+

@@ -1,12 +1,12 @@
 Henryblog::Application.routes.draw do
 
-  match "index" => "posts#index"
-  match "about" => "static_pages#about"
-  match "contact" => "static_pages#contact"
-  match "paintings" => "static_pages#paintings"
-  match "programming" => "static_pages#programming"
-  match "odyssey" => "static_pages#odyssey"
-  match "logout" => "sessions#destroy", as: "logout"
+  get "index" => "posts#index"
+  get "about" => "static_pages#about"
+  get "contact" => "static_pages#contact"
+  get "paintings" => "static_pages#paintings"
+  get "programming" => "static_pages#programming"
+  get "odyssey" => "static_pages#odyssey"
+  get "logout" => "sessions#destroy", as: "logout"
   get "admin/dashboard"
 
 
