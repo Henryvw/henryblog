@@ -30,8 +30,8 @@ img {
 
 body, html{
     background-color:#EAE9E1;
-      width:1000px;
-    height:1000px;
+      width:900px;
+    height:1100px;
     margin: auto;
 }
 
@@ -80,18 +80,20 @@ body, html{
 }
 
 .infobox {
-    width: 120%;
-    height: 220px;
     position: relative;
     background: url(/assets/smallinfoblankbox.png); 
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    display:block;
+    height: 165px;
+    width: 278px
 }
 
 .infotext {
     position: absolute;
-    top: 30%;
-    left: 12%;
+    top: 15%;
+    left: 9%;
     z-index:100;
-    width: 80%
+    width: 85%
 }
