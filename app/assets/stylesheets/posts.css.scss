@@ -30,16 +30,19 @@ body, html{
 }
 
 .more_button {
+  height: 40px;
+  width: 40px;
   position: relative;
-  margin-top: 60px;
+  margin-top: 40px;
   padding-left: 250px;
-  padding-bottom: 9px;
+  padding-bottom: 40px;
   background: url(/assets/morebuttonsprite.png);
   background-position: 5px 0px;
   background-repeat: no-repeat;
   display:block;
-  height: 50px;
-  width: 50px;
+  max-height: 5px;
+  max-width: 5px;
+
 
 }
 
