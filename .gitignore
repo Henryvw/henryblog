@@ -13,3 +13,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore .DS_Store - a Mac OS X hidden file that saves Finder preference
+.DS_Store
