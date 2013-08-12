@@ -32,12 +32,14 @@ body, html{
 .more_button {
   position: relative;
   margin-top: 60px;
+  padding-left: 250px;
+  padding-bottom: 9px;
   background: url(/assets/morebuttonsprite.png);
-  background-position: 0px 0px;
+  background-position: 5px 0px;
   background-repeat: no-repeat;
   display:block;
-  height: 10px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
 
 }
 

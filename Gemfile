@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
-
+ruby "2.0.0"
 gem 'rails', '4.0.0'
+gem 'activesupport', '~> 4.0.0.rc2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -25,7 +26,6 @@ group :assets do
   gem 'twitter-bootstrap-rails', '2.1.7'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 

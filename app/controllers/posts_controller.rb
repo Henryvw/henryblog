@@ -9,6 +9,7 @@ class PostsController < ApplicationController
       format.json { render json: @posts }
     end
   end
+  
 
   # GET /posts/1
   # GET /posts/1.json
