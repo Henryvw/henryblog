@@ -1,0 +1,117 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sub-header {
+  font-size: 16px;
+}
+
+img {
+	width:350px;
+}
+
+
+.img_caption {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.center { 
+  position: center;
+  text-align: center;
+  width: 500px
+}
+
+body, html{
+    background-color:#EAE9E1;
+    width:1100px;
+    height:1100px;
+    margin: auto;
+}
+
+.more_button {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  margin-top: 40px;
+  padding-left: 250px;
+  padding-bottom: 40px;
+  background: url(/assets/morebuttonsprite.png);
+  background-position: 5px 0px;
+  background-repeat: no-repeat;
+  display:block;
+  max-height: 5px;
+  max-width: 5px;
+
+}
+
+.more_button:hover {
+  background-position: 0px -76px;
+}
+
+.posts {
+    width: 100%;
+
+  .post-author {
+    font-size: 12px;
+
+  }
+
+  .post-content {
+    
+
+  }
+
+  .post-title {
+    font-style: italic;
+    margin-bottom: 10px;
+
+  }
+}
+
+
+#content
+{    top:0px;
+    position:absolute;
+    border:1px solid red;
+}
+
+
+#wrapper {
+  background-color:#EAE9E1;
+  width: 20%;
+  margin: auto;
+}
+
+.titlebox {
+  margin-top: 40px;
+  margin-left: -40px;
+  margin-right: -40px;
+  float: right;
+  gridColumnWidth: 450px;
+  position: relative;
+  background-position:center;
+  display:block;
+  
+}
+
+.infobox {
+    position: relative;
+    float: right;
+    margin-right: 20px;
+    margin-top: 60px;
+    background: url(/assets/smallinfoblankbox.png); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:block;
+    height: 165px;
+    width: 278px
+}
+
+.infotext {
+    position: relative;
+    top: 15%;
+    left: 9%;
+    width: 85%
+}
