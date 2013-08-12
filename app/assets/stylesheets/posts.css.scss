@@ -29,20 +29,18 @@ body, html{
     margin: auto;
 }
 
-.more_button {
-  height: 10px;
-  width: 30px;
+#more_button {
   position: relative;
   margin-top: 40px;
   padding-left: 250px;
   padding-bottom: 40px;
   background: url(/assets/morebuttonsprite.png);
   background-position: 5px 0px;
-  background-size: 100px;
+  background-size:100px 100px;
   background-repeat: no-repeat;
 }
 
-.more_button:hover {
+#more_button:hover {
   background-position: 0px -76px;
 }
 

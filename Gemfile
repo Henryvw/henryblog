@@ -15,7 +15,7 @@ gem 'actionpack-action_caching'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
-	gem 'sqlite3'
+	gem 'pg'
   gem 'pry'
 end
 
