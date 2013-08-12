@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 gem 'rails', '4.0.0'
 gem 'activesupport', '~> 4.0.0.rc2'
+gem 'twitter-bootstrap-rails', '2.1.7'
+gem 'less-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -20,10 +22,8 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'less-rails'
   gem 'sass-rails'
   gem 'coffee-rails', '~> 4.0.0'
-  gem 'twitter-bootstrap-rails', '2.1.7'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', "~> 2.0.0"
