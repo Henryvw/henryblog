@@ -7,12 +7,7 @@
 }
 
 img {
-	width:350px;
-}
-
-.img_caption {
-  font-size: 10px;
-  font-style: italic;
+	width:500px;
 }
 
 .center { 
@@ -30,17 +25,18 @@ body, html{
 
 #more_button {
   position: relative;
-  margin-top: 40px;
+  margin-top: 62px;
+  margin-left: 170px;
   padding-left: 250px;
   padding-bottom: 40px;
   background: url(/assets/morebuttonsprite.png);
-  background-position: 5px 0px;
+  background-position: 0px 0px;
   background-size:100px 100px;
   background-repeat: no-repeat;
 }
 
 #more_button:hover {
-  background-position: 0px -76px;
+  background-position: 0px -54px;
 }
 
 .posts {
