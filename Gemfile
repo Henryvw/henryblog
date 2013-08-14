@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 gem 'rails', '4.0.0'
 gem 'activesupport', '~> 4.0.0.rc2'
-gem 'twitter-bootstrap-rails', '2.1.7'
 
 #Railscast said to add these gems to help with Rails 4 upgrade
 gem 'protected_attributes'
@@ -33,6 +32,7 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
   gem 'less-rails'
   gem 'uglifier', '>= 1.3.0'
+  gem 'twitter-bootstrap-rails', '2.1.7'
 
 end
 

@@ -10,6 +10,21 @@ img {
 	width:500px;
 }
 
+#logo {
+  padding-bottom: 320px;
+  background: url(/assets/stoic_hacks_logo.png);
+  background-size:340px;
+  background-repeat: no-repeat;
+}
+  
+#logo:hover {
+  background: url(/assets/stoic_hacks_logo.png);
+  padding-bottom: 320px;
+  background-size:350px;
+  background-repeat: no-repeat;
+}
+
+
 .center { 
   position: center;
   text-align: center;
@@ -27,16 +42,16 @@ body, html{
   position: relative;
   margin-top: 62px;
   margin-left: 170px;
-  padding-left: 250px;
   padding-bottom: 40px;
+  overflow: hidden;
   background: url(/assets/morebuttonsprite.png);
-  background-position: 0px 0px;
+  background-position: 0px -54px;
   background-size:100px 100px;
   background-repeat: no-repeat;
 }
 
 #more_button:hover {
-  background-position: 0px -54px;
+  background-position: 0px 0px;
 }
 
 .posts {
@@ -104,3 +119,8 @@ body, html{
     left: 9%;
     width: 85%
 }
+
+a:link {color:#FF0000;}      
+a:visited {color:#00FF00;}  
+a:hover {color:#FF00FF;}  
+a:active {color:#0000FF;} 
