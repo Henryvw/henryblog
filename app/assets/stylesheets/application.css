@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+
+
+#header {
+  height: 30px;
+  width: 130px;
+  background: url(/assets/stoichacksheader.png);
+  background-size:130px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  margin-left: 30px;
+  background-repeat: no-repeat;
+}
