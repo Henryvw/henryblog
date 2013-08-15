@@ -2,58 +2,44 @@
 
 .row-fluid
   .span12
-    .span4
+    .span6
+      #titlebox
+        = image_tag "widetitlebox.png"      
+    .span6
       = link_to index_path do
         #logo
     .span4
-      .titlebox
-        = image_tag "widetitlebox.png"
-    .span4
-      .infobox
-        .infotext I'm a 28-year-old web developer and philosophy student who believes that philosophy has practical applications in life and in business. I live in Berlin, Germany.
-        = link_to about_path do 
-          #more_button
+  .infobox
+    .infotext I'm a 28-year-old web developer and philosophy student who believes that philosophy has practical applications in life and in business. I live in Berlin, Germany.
+    = link_to about_path do 
+      #more_button
+  #homeposts
+    %p
+    - @posts.each do |post| 
+      .posts  
+        .post-title
+          = link_to post.title, post
+        .post-author 
+          = post.name 
+        .post-content
+          =truncate( post.content,:length => 300)
+        = link_to 'Read More', post 
+  .span6.offset6
+    #epictetusbox
+      #epictetustext In every affair consider what precedes and follows, and then undertake it. Otherwise you will begin with spirit; but not having thought of the consequences, when some of them appear you will shamefully desist. You will behave like children who sometimes play like wrestlers, sometimes gladiators, sometimes blow a trumpet, and sometimes act a tragedy when they have seen and admired these shows. Thus you too will be at one time a wrestler, at another a gladiator, now a philosopher, then an orator; but with your whole soul, nothing at all.
+    #epictetusphoto   
 
 
 
-/ = link_to image_tag, about_path, id: "more_button"
-/ = link_to about_path image_tag "MoreButton.png", :style => "max-height: 100px; max-width: 100px;"
 
 
-= link_to "My Programming Schedule", programming_path
 
-
-%p
-  - @posts.each do |post| 
-    
-    .posts  
-      .post-title
-        = link_to post.title, post
-      .post-author 
-        = post.name 
-      .post-content
-        =truncate( post.content,:length => 300)
-      = link_to 'Read More', post 
-      =# link_to 'Edit', edit_post_path(post) 
-      =# link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } 
    
 
-  %br
-  %br
-  %br
-  %br
-  %br
-
-  -if current_user
-    %span logged in as
-    = current_user.email
-    = link_to 'log out', logout_path
-  -else 
-    = form_tag sessions_path do
-      = label_tag :email
-      = text_field_tag :email
-      = label_tag :password
-      = password_field_tag :password
-      = submit_tag "log in"
+%br
+%br
+%br
+%br
+%br
 
 

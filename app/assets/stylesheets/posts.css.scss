@@ -11,22 +11,25 @@ img {
 }
 
 #logo {
-  padding-bottom: 320px;
+  height: 370px;
   background: url(/assets/stoic_hacks_logo.png);
-  background-size:340px;
+  background-size:370px;
+  margin-top: 10px;
+  margin-left: 60px;
   background-repeat: no-repeat;
 }
   
 #logo:hover {
   background: url(/assets/stoic_hacks_logo.png);
-  padding-bottom: 320px;
-  background-size:340px;
+  height: 370px;
+  background-size:370px;
   background-repeat: no-repeat;
 }
 
 
+
 #bandwlogo {
-  padding-bottom: 340px;
+  height: 300px;
   background: url(/assets/Stoic.jpg);
   background-size:320px;
   margin-top: 30px;
@@ -36,7 +39,7 @@ img {
   
 #bandwlogo:hover {
   background: url(/assets/Stoic.jpg);
-  padding-bottom: 340px;
+  height: 320px;
   background-size:320px;
   background-repeat: no-repeat;
 }
@@ -50,10 +53,12 @@ img {
 
 body, html{
     background-color:#EAE9E1;
-    width:1100px;
-    height:1100px;
+    width:900px;
+    height:1250px;
     margin: auto;
 }
+
+
 
 #more_button {
   position: relative;
@@ -84,43 +89,31 @@ body, html{
   }
 
   .post-title {
-    font-style: italic;
+    font-style: bold;
     margin-bottom: 10px;
 
   }
 }
 
 
-#content
-{    top:0px;
-    position:absolute;
-    border:1px solid red;
-}
-
-
-#wrapper {
-  background-color:#EAE9E1;
-  width: 20%;
-  margin: auto;
-}
-
-.titlebox {
+#titlebox {
+  height: 5px;
   margin-top: 40px;
-  margin-left: -40px;
-  margin-right: -40px;
+  margin-left: 30px;
+  margin-right: -30px;
   float: right;
-  gridColumnWidth: 450px;
-  position: relative;
-  background-position:center;
-  display:block;
   
+}
+
+#homeposts {
+  margin-left: 40px;
 }
 
 .infobox {
     position: relative;
     float: right;
-    margin-right: 20px;
-    margin-top: 60px;
+    margin-right: 60px;
+    margin-top: -20px;
     background: url(/assets/smallinfoblankbox.png); 
     background-position: center;
     background-size: cover;
@@ -135,6 +128,35 @@ body, html{
     top: 15%;
     left: 9%;
     width: 85%
+}
+
+#epictetusbox {
+  height: 500px;
+  width: 500px;
+  margin-left: -22px;
+  margin-top: 20px;
+  background: url(/assets/epictetusbox.png); 
+  background-position: center;
+  background-size: 660px 500px;
+  background-repeat: no-repeat;
+}
+
+#epictetustext {
+    position: relative;
+    top: 10%;
+    left: 30%;
+    width: 40%
+}
+
+#epictetusphoto {
+    height: 100px;
+    width: 100px;
+    margin-top: -75px;
+    margin-left: 225px;
+    display: block;
+    background: url(/assets/Epictetus.jpeg); 
+    background-size: 100px;
+    background-repeat: no-repeat;
 }
 
 a:link {color:#FF0000;}      

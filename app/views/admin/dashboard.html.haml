@@ -21,8 +21,22 @@
     = link_to 'Edit', edit_post_path(post) 
     = link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } 
 
-@
  
+= link_to "My Programming Schedule", programming_path
+
+
+-if current_user
+  %span logged in as
+  = current_user.email
+  = link_to 'log out', logout_path
+-else 
+  = form_tag sessions_path do
+    = label_tag :email
+    = text_field_tag :email
+    = label_tag :password
+    = password_field_tag :password
+    = submit_tag "log in"
+
 
 
 %br/ 
