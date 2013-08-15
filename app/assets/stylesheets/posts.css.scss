@@ -10,7 +10,7 @@ img {
 	width:500px;
 }
 
-#logo {
+#homelogo {
   height: 370px;
   background: url(/assets/stoic_hacks_logo.png);
   background-size:370px;
@@ -18,19 +18,15 @@ img {
   margin-left: 60px;
   background-repeat: no-repeat;
 }
-  
-#logo:hover {
-  background: url(/assets/stoic_hacks_logo.png);
+
+#logo {
   height: 370px;
+  width: 400px;
+  background: url(/assets/stoic_hacks_logo.png);
   background-size:370px;
+  margin-top: 10px;
+  margin-left: 50px;
   background-repeat: no-repeat;
-}
-
-
-.center { 
-  position: center;
-  text-align: center;
-  width: 500px
 }
 
 body, html{
@@ -113,32 +109,34 @@ body, html{
 }
 
 #epictetusbox {
-  height: 500px;
-  width: 500px;
-  margin-left: -22px;
-  margin-top: 20px;
+  height: 450px;
+  width: 420px;
+  margin-left: 12px;
+  margin-top: 60px;
   background: url(/assets/epictetusbox.png); 
   background-position: center;
-  background-size: 660px 500px;
+  background-size: 270px 410px;
   background-repeat: no-repeat;
 }
 
 #epictetustext {
     position: relative;
-    top: 10%;
-    left: 30%;
-    width: 40%
+    top: 9%;
+    left: 25%;
+    width: 50%;
+
 }
 
 #epictetusphoto {
     height: 100px;
-    width: 100px;
-    margin-top: -75px;
-    margin-left: 225px;
+    width: 215px;
+    margin-top: -5px;
+    margin-left: 215px;
     display: block;
     background: url(/assets/Epictetus.jpeg); 
-    background-size: 100px;
+    background-size: 125px;
     background-repeat: no-repeat;
+
 }
 
 a:link {color:#FF0000;}      

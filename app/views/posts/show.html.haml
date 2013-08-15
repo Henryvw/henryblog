@@ -1,0 +1,18 @@
+.row-fluid
+  .span6
+    %p#notice= notice
+    %p
+      %b
+        = @post.title
+    %p
+      By
+      \#{@post.name}
+    %p
+      = @post.content
+      |
+      \#{link_to 'Back', posts_path}
+  .span6
+    = link_to index_path do
+      #logo
+
+
