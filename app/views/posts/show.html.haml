@@ -11,6 +11,9 @@
       = @post.content
       |
       \#{link_to 'Back', posts_path}
+
+    = render "comments"
+
   .span6
     = link_to index_path do
       #logo
