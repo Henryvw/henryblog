@@ -12,6 +12,7 @@
       |
       \#{link_to 'Back', posts_path}
 
+    = image_tag @post.watercolor.url(:medium)
     = render "comments"
 
   .span6
