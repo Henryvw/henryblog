@@ -7,7 +7,7 @@ Henryblog::Application.configure do
   config.cache_classes = false
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
-  
+
   config.assets.compress = false
   
   config.eager_load = false

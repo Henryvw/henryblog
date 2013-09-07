@@ -134,7 +134,16 @@ body, html{
 
 }
 
-a:link {color:#FF0000;}      
-a:visited {color:#00FF00;}  
-a:hover {color:#FF00FF;}  
-a:active {color:#0000FF;} 
+a:link {color:#B2FF99;}      
+a:visited {color:#FF0000;}
+a:hover {color:#FF0000;}
+a:active {color:#FF000;}
+
+
+a:link {background-color:#FF0000;}
+a:visited {background-color:#B2FF99;}
+a:hover {background-color:#B2FF99;}
+a:active {background-color:#B2FF99;}
+
+
+
