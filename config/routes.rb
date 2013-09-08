@@ -8,7 +8,7 @@ Henryblog::Application.routes.draw do
   get "odyssey" => "static_pages#odyssey"
   get "logout" => "sessions#destroy", as: "logout"
   get "admin/dashboard"
-
+  get 'tags/:tag', to: 'posts#index', as: :tag
 
   resources :posts
   resources :users

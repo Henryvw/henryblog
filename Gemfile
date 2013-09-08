@@ -5,6 +5,7 @@ gem 'activesupport', '~> 4.0.0.rc2'
 gem 'twitter-bootstrap-rails', '2.1.6'
 gem 'less-rails'
 gem 'paperclip', '~> 3.5.1'
+gem 'acts-as-taggable-on'
 
 
 #Railscast said to add these gems to help with Rails 4 upgrade

@@ -134,16 +134,26 @@ body, html{
 
 }
 
-a:link {color:#B2FF99;}      
+a:link {color:#FF0000;}      
 a:visited {color:#FF0000;}
 a:hover {color:#FF0000;}
 a:active {color:#FF000;}
 
 
-a:link {background-color:#FF0000;}
+a:link {background-color:#B2FF99;}
 a:visited {background-color:#B2FF99;}
 a:hover {background-color:#B2FF99;}
 a:active {background-color:#B2FF99;}
 
+#post {
+  margin-top: 40px;
+  margin-left: 40px;
+}
 
-
+#tag_cloud {
+  width: 400px;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}
