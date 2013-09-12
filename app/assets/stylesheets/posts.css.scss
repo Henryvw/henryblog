@@ -79,7 +79,8 @@ body, html{
 }
 
 #homeposts {
-  margin-left: 40px;
+  margin-left: 28px;
+  margin-top: -775px;
 }
 
 .infobox {
@@ -134,16 +135,16 @@ body, html{
 
 }
 
-a:link {color:#FF0000;}      
-a:visited {color:#FF0000;}
-a:hover {color:#FF0000;}
-a:active {color:#FF000;}
+a:link {color:#286981 !important; text-decoration: none;}      
+a:visited {color:#12120A !important;}
+a:hover {color:#12120A !important;}
+a:active {color:#12120A !important;}
 
 
-a:link {background-color:#B2FF99;}
-a:visited {background-color:#B2FF99;}
-a:hover {background-color:#B2FF99;}
-a:active {background-color:#B2FF99;}
+a:link {background-color:#FFFFFF !important;}
+a:visited {background-color:#FFFFFF !important;}
+a:hover {background-color:#FFFFFF !important;}
+a:active {background-color:#FFFFFF !important;}
 
 #post {
   margin-top: 40px;

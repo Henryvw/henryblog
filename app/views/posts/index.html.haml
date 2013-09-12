@@ -17,23 +17,27 @@
     #epictetusbox
       #epictetustext In every affair consider what precedes and follows, and then undertake it. Otherwise you will begin with spirit; but not having thought of the consequences, when some of them appear you will shamefully desist. You will behave like children who sometimes play like wrestlers, sometimes gladiators, sometimes blow a trumpet, and sometimes act a tragedy when they have seen and admired these shows. Thus you too will be at one time a wrestler, at another a gladiator, now a philosopher, then an orator; but with your whole soul, nothing at all.
     #epictetusphoto   
-
-  #homeposts
-    %p
-    - @posts.each do |post| 
-      .posts  
-        .post-title
-          = link_to post.title, post
-        .post-author 
-          = post.name 
-        .post-content
-          =truncate( post.content,:length => 300)
-        = link_to 'Read More', post 
+  .span12
+    .span6
+      #homeposts
+        %p
+        - @posts.each do |post| 
+          .posts  
+            .post-title
+              = link_to post.title, post
+            .post-author 
+              = post.name 
+            .post-content
+              = truncate( post.content,:length => 300)
+            = link_to 'Read More', post
+            Tags: 
+            = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+          %br
 
 / #tag_cloud
 /   - tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class|
 /     = link_to tag.name, tag_path(tag.name), class: css_class
-/     Tags: #{raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')}
+/   Tags: #{raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')}
 
 
    
