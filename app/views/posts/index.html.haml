@@ -30,7 +30,7 @@
             .post-content
               = truncate( post.content,:length => 300)
             = link_to 'Read More', post
-            Tags: 
+            %br
             = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
           %br
 

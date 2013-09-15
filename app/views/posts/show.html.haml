@@ -12,7 +12,7 @@
         |
         \#{link_to 'Back', posts_path}
       %p
-        = image_tag @post.watercolor.url(:medium)
+        = image_tag @post.watercolor.url(:medium) unless image_tag = ""
       %p
         = render "comments"
 

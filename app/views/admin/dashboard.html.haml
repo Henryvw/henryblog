@@ -2,27 +2,27 @@
 
 %br/
 
-= link_to 'New Post', new_post_path 
+= button_to 'New Post', new_post_path 
 
-%br/
-%br/
 
 %h3 Current Posts
-- @posts = Post.all
-- @posts.each do |post| 
-  .posts  
-    .post-title
-      = post.title 
-    .post-content
-      =truncate( post.content,:length => 300)
-    .post-author 
-      = post.name 
-    = link_to 'Read More', post 
-    = link_to 'Edit', edit_post_path(post) 
-    = link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } 
+#adminposts
+  - @posts = Post.all
+  - @posts.each do |post| 
+    .posts  
+      .post-title
+        = post.title 
+      .post-content
+        =truncate( post.content,:length => 600)
+      .post-author 
+        = post.name
+        = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+    = button_to 'Read More', post
+    = button_to 'Edit', edit_post_path(post) 
+    = button_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } 
 
  
-= link_to "My Programming Schedule", programming_path
+= button_to "My Programming Schedule", programming_path
 
 
 -if current_user
