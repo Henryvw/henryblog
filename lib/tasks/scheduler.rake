@@ -8,7 +8,7 @@
 
 \f0\fs30 \cf2 \cb3 desc "This task is called by the Heroku cron add-on"\cf4 \
 \cf2 task :call_page => :environment do\cf4 \
-\cf2 \'a0 \'a0uri = URI.parse('http://www.myapp.org/')\cf4 \
+\cf2 \'a0 \'a0uri = URI.parse('http://www.henryvanwagenberg.com/')\cf4 \
 \cf2 \'a0 \'a0Net::HTTP.get(uri)\cf4 \
 \cf2 \'a0end\cf4 \
 }
