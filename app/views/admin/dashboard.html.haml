@@ -1,46 +1,42 @@
 
 #adminposts
   %br
-  
-  %h1 Henry's Blog Admin
 
   %br
+  -if current_user
+    %span logged in as
+    = current_user.email
+    = link_to 'log out', logout_path
 
-  %h5
-    = link_to 'New Post', new_post_path 
+    %h1 Henry's Blog Admin
 
-  %h3 Current Posts
-  - @posts = Post.all
-  - @posts.each do |post| 
-    .posts  
-      .post-title
-        = post.title 
-      .post-content
-        =truncate( post.content,:length => 600)
-      .post-author 
-        = post.name
-        = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+    %br
+
+    %h5
+      = link_to 'New Post', new_post_path 
+
+    %h3 Current Posts
+    - @posts = Post.all
+    - @posts.each do |post| 
+      .posts  
+        .post-title
+          = post.title 
+        .post-content
+          =truncate( post.content,:length => 600)
+        .post-author 
+          = post.name
+          = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+      %h6
+        = link_to '- Read More', post
+        = link_to '- Edit', edit_post_path(post) 
+        = link_to '- Delete -', post, method: :delete, data: { confirm: 'Are you sure?' } 
+    %br
     %h6
-      = link_to '- Read More', post
-      = link_to '- Edit', edit_post_path(post) 
-      = link_to '- Delete -', post, method: :delete, data: { confirm: 'Are you sure?' } 
+      = link_to "My Programming Schedule", programming_path
 
-%h6
-  = link_to "My Programming Schedule", programming_path
-
-
--if current_user
-  %span logged in as
-  = current_user.email
-  = link_to 'log out', logout_path
--else 
-  = form_tag sessions_path do
-    = label_tag :email
-    = text_field_tag :email
-    = label_tag :password
-    = password_field_tag :password
-    = submit_tag "log in"
-
+  -else 
+    = render 'login'
+    = link_to 'Back', posts_path
 
 
 %br/ 

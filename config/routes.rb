@@ -9,6 +9,9 @@ Henryblog::Application.routes.draw do
   get "logout" => "sessions#destroy", as: "logout"
   get "admin/dashboard"
   get 'tags/:tag', to: 'posts#index', as: :tag
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
 
   resources :posts
   resources :users
