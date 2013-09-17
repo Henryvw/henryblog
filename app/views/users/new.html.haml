@@ -3,6 +3,8 @@
 
 
 #adminposts
+  = render 'login'
+
   %br
   %br
   -if current_user
@@ -17,9 +19,8 @@
       = f.password_field :password_confirmation
       %br/
       = f.submit "sign up"
-  / -else
+  -else
     %h5
       Please first login in order to create a new user.
     %br
-    = render 'login'
     = link_to 'Back', posts_path
