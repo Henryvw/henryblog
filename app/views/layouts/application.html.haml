@@ -11,9 +11,14 @@
     = link_to index_path do
       #header
 
-
+  -if current_user
+    #logged_in
+      %span logged in as
+      = current_user.email
+      = link_to 'log out', logout_path
 
   %body
     = yield
     %center
       = image_tag "footerfull.png"
+
