@@ -3,6 +3,8 @@ http://serverfault.com/questions/384063/how-can-i-avoid-heroku-stopping-my-dyno 
 docs http://devcenter.heroku.com/articles/scheduler /n"
 task :call_page => :environment do
   uri = URI.parse('http://www.henryvanwagenberg.com/')
-  Net::HTTP.get(uri)
-  puts "GOT #{uri}"
+  response = Net::HTTP.get_response(uri)
+  # http://ruby-doc.org/stdlib-2.0.0/libdoc/net/http/rdoc/Net/HTTPResponse.html
+  # includes http header response info in log
+  puts "GOT #{uri} #{response.code} #{response.msg}"
 end
