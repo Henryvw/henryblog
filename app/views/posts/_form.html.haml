@@ -18,7 +18,8 @@
   .field
     = f.label :content
     %br/
-    = f.text_area :content
+    = f.text_area :content, :class => "tinymce", :rows => 30, :cols => 60
+    = tinymce
   .field
     = f.label :watercolor_or_other_image
     %br/

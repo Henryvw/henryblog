@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
     else
-      @posts = Post.all
+      @posts = Post.all.page(params[:page]).per(5)
     end
     
     respond_to do |format|
@@ -36,6 +36,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def date
+    @date = Date.new
+  end
+  
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
