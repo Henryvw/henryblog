@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
     else
-      @posts = Post.all.page(params[:page]).per(5)
+      @posts = Post.order("created_at DESC").page(params[:page]).per(5)
     end
     
     respond_to do |format|
@@ -18,7 +18,6 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
