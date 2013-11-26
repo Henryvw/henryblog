@@ -3,13 +3,15 @@
     #post
       %p
         %b
-        = @post.title
+        .post-title
+          = @post.title
         = raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
 
       %p
         By
         #{@post.name}
       %p
+        = @post.intro.html_safe
         = @post.content.html_safe
         |
         #{link_to 'Back', posts_path}

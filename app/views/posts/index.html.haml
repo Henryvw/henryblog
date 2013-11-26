@@ -28,7 +28,7 @@
               = post.name + " -"
               = post.created_at.strftime("%d %b %Y")
             .post-content
-              = truncate_html(post.content, length: 300, omission: '...', separator: '-MORE-')
+              = truncate_html(post.intro, length: 10000, omission: '...', separator: '-MORE-')
             = link_to 'Read More', post
             %br
             = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')

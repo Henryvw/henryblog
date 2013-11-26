@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125231651) do
+ActiveRecord::Schema.define(version: 20131126182735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20131125231651) do
     t.string   "watercolor_content_type"
     t.integer  "watercolor_file_size"
     t.datetime "watercolor_updated_at"
-    t.string   "intro"
+    t.text     "intro"
   end
 
   create_table "taggings", force: true do |t|
