@@ -11,7 +11,7 @@
         #{@post.name}
       %p
         - if @post.watercolor.file?
-          = image_tag @post.watercolor.url(:medium)
+          = image_tag @post.watercolor.url(:large)
       %p
         = @post.intro.html_safe
         = @post.content.html_safe
