@@ -3,7 +3,7 @@
   .span12
     .span6
       #titlebox
-        = image_tag "widetitlebox.png"      
+        = image_tag "widetitlebox.png" :size => "200x50"    
     .span6
       = link_to index_path do
         #homelogo
@@ -32,7 +32,6 @@
                 = image_tag post.watercolor.url(:medium)
             .post-content
               = truncate_html(post.intro, length: 10000, omission: '...', separator: '-MORE-')
-              = image_tag post.watercolor.url(:medium)
             = link_to 'Read More', post
             %br
             = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
