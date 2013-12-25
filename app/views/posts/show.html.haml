@@ -10,13 +10,14 @@
         By
         #{@post.name}
       %p
+        - if @post.watercolor.file?
+          = image_tag @post.watercolor.url(:medium)
+      %p
         = @post.intro.html_safe
         = @post.content.html_safe
         |
         #{link_to 'Back', posts_path}
-      %p
-        - if @post.watercolor.file?
-          = image_tag @post.watercolor.url(:medium)
+
 
         = render "comments"
 

@@ -27,6 +27,9 @@
             .post-author 
               = post.name + " -"
               = post.created_at.strftime("%d %b %Y")
+            %p
+              - if post.watercolor.file?
+                = image_tag post.watercolor.url(:medium)
             .post-content
               = truncate_html(post.intro, length: 10000, omission: '...', separator: '-MORE-')
               = image_tag post.watercolor.url(:medium)
