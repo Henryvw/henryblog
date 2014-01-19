@@ -11,6 +11,8 @@ gem 'nokogiri'
 gem 'truncate_html'
 gem 'kaminari'
 
+gem 'aws-sdk'
+
 
 #Railscast said to add these gems to help with Rails 4 upgrade
 gem 'protected_attributes'
