@@ -10,7 +10,6 @@ gem 'tinymce-rails', '~> 4.0.10'
 gem 'nokogiri' 
 gem 'truncate_html'
 gem 'kaminari'
-
 gem 'aws-sdk'
 
 
@@ -31,6 +30,7 @@ gem "bcrypt-ruby", '~> 3.0.0'
 
 group :production do
   gem 'rails_12factor'
+  gem 'mysql'
 end
 
 # Gems used only for assets and not required
