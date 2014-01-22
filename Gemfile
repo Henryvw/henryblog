@@ -30,7 +30,7 @@ gem "bcrypt-ruby", '~> 3.0.0'
 
 group :production do
   gem 'rails_12factor'
-  gem 'mysql2'
+  gem 'pg'
 end
 
 # Gems used only for assets and not required
