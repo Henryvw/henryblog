@@ -21,11 +21,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: mysql
-  encoding: utf8
-  database: your_db
+  adapter: postgresql
+  encoding: unicode
+  database: my_datbase_production
   username: root
-  password: your_pass
-  socket: /tmp/mysql.sock
-  host: your_db_ip     #defaults to 127.0.0.1
-  port: 3306
+  pool: 5
+  timeout: 5000
