@@ -14,6 +14,9 @@
 /log/*.log
 /tmp
 
+# Ignore .env
+.env
+
 # Ignore .DS_Store - a Mac OS X hidden file that saves Finder preference
 .DS_Store
 .elasticbeanstalk/
