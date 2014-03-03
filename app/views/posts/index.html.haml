@@ -3,28 +3,28 @@
   .span12
     .span6
       #titlebox
-        = image_tag "widetitlebox.png", width: 450    
+        = image_tag "widetitlebox.png", width: 450
     .span6
       = link_to index_path do
         #homelogo
     .span4
   .infobox
-    .infotext I'm a 28-year-old web developer and amateur philosophy student who believes that philosophy has practical applications in life and in business. I live in Berlin, Germany.
-    = link_to about_path do 
+    .infotext I'm a 29-year-old web developer and amateur philosophy student who believes that philosophy has practical applications in life and in business. I live in Berlin, Germany.
+    = link_to about_path do
       #more_button
   .span6.offset6
     #epictetusbox
       #epictetustext In every affair consider what precedes and follows, and then undertake it. Otherwise you will begin with spirit; but not having thought of the consequences, when some of them appear you will shamefully desist. You will behave like children who sometimes play like wrestlers, sometimes gladiators, sometimes blow a trumpet, and sometimes act a tragedy when they have seen and admired these shows. Thus you too will be at one time a wrestler, at another a gladiator, now a philosopher, then an orator; but with your whole soul, nothing at all.
-    #epictetusphoto   
+    #epictetusphoto
   .span12
     .span6
       #homeposts
         %p
-        - @posts.each do |post| 
-          .posts  
+        - @posts.each do |post|
+          .posts
             .post-title
               = link_to(post.title, post)
-            .post-author 
+            .post-author
               = post.name + " -"
               = post.created_at.strftime("%d %b %Y")
             %p
@@ -36,9 +36,9 @@
             %br
             = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
           %br
-        = paginate @posts 
+        = paginate @posts
 
-   
+
 
 %br
 %br
