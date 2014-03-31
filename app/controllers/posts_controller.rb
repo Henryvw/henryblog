@@ -1,19 +1,22 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
-  def index    
+
+  before_filter :require_admin_user!, except: [:show, :index]
+
+  def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
     else
       @posts = Post.order("created_at DESC").page(params[:page]).per(5)
     end
-    
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
     end
   end
-  
+
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -38,7 +41,7 @@ class PostsController < ApplicationController
   def date
     @date = Date.new
   end
-  
+
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
@@ -93,5 +96,5 @@ class PostsController < ApplicationController
     end
 end
 
-  
+
 
