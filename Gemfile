@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.1.0"
 gem 'rails', '4.0.0'
 gem 'activesupport', '~> 4.0.0.rc2'
 gem 'twitter-bootstrap-rails', '2.1.6'
@@ -13,7 +13,7 @@ gem 'kaminari'
 gem 'aws-sdk'
 gem 'fog'
 gem 'dotenv-rails'
-
+gem 'libv8', '3.16.14.7'
 
 #Railscast said to add these gems to help with Rails 4 upgrade
 gem 'protected_attributes'
