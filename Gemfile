@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 ruby "2.1.4"
 gem 'rails', '4.0.0'
 gem 'activesupport', '~> 4.0.0.rc2'
-gem 'twitter-bootstrap-rails', '2.1.6'
-gem 'less-rails'
+gem 'twitter-bootstrap-rails', '2.2.0'
+gem 'less-rails', "2.3.3"
 gem 'paperclip', '~> 3.5.1'
 gem 'acts-as-taggable-on'
 gem 'tinymce-rails', '~> 4.0.10'
